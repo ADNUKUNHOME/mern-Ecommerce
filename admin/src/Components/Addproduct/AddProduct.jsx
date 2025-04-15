@@ -33,7 +33,7 @@ const AddProduct = () => {
 
     try {
         // Upload Image
-        const uploadResponse = await fetch('http://localhost:4000/upload', {
+        const uploadResponse = await fetch(`${import.meta.env.VITE_API_URL}/upload`, {
             method: 'POST',
             headers: {
                 accept: 'application/json'
@@ -47,7 +47,7 @@ const AddProduct = () => {
             product.image = responseData.image_url;
 
             // Add Product
-            const addProductResponse = await fetch('http://localhost:4000/addproduct', {
+            const addProductResponse = await fetch(`${import.meta.env.VITE_API_URL}/addproduct`, {
                 method: 'POST',
                 headers: {
                     accept: 'application/json',

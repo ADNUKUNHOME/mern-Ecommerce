@@ -20,7 +20,7 @@ const LoginSignup = () => {
   const signup = async () => {
     let responseData;
       
-    await fetch('http://localhost:4000/signup', {
+    await fetch(`${import.meta.env.VITE_API_URL}/signup`, {
       method: 'POST',
       headers: {
         Accept: "application/form-data",
@@ -40,7 +40,7 @@ const LoginSignup = () => {
   const login = async () => {
     let responseData;
       
-    await fetch('http://localhost:4000/login', {
+    await fetch(`${import.meta.env.VITE_API_URL}/login`, {
       method: 'POST',
       headers: {
         Accept: "application/form-data",
