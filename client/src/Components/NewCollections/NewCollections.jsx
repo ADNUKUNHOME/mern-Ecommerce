@@ -11,7 +11,7 @@ const NewCollections = () => {
     fetch(`${process.env.REACT_APP_API_URL}/newcollections`)
     .then((response) => response.json())
     .then((data) => setNew_collections(data))  
-  }, [])
+  }, [])  
 
   return (
     <div className='new-collections'>
